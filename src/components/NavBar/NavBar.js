@@ -133,7 +133,8 @@ const BurgerMenu = styled.div`
   min-width: ${props => (props.ismobile ? 'unset' : '600px')};
   top: ${props => (props.ismobile ? '100%' : '0')};
   background: ${props => props.background};
-  padding: ${props => (props.ismobile && props.menuIsOpen ? '30px' : '0')};
+  padding-top: ${props => (props.ismobile && props.menuIsOpen ? '30px' : '0')};
+  padding-bottom: ${props => (props.ismobile && props.menuIsOpen ? '30px' : '0')};
   max-height: ${props => (props.menuIsOpen ? '400px' : '0')};
   align-items: center;
   justify-content: space-between;
