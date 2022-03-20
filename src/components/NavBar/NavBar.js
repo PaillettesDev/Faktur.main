@@ -5,7 +5,7 @@ import './NavBar.css'
 const Navbar = ({ colors }) => {
     const [scrolled, setScrolled] = useState(false)
     const [ismobile, setismobile] = useState(
-        window.innerWidth <= 768 ? true : false
+        window.innerWidth <= 800 ? true : false
     )
     const [menuIsOpen, setmenuIsOpen] = useState(ismobile ? false : true)
 
@@ -15,7 +15,7 @@ const Navbar = ({ colors }) => {
     })
 
     window.addEventListener('resize', () => {
-        if (window.innerWidth <= 768) setismobile(true)
+        if (window.innerWidth <= 800) setismobile(true)
         else setismobile(false)
     })
 
@@ -25,7 +25,7 @@ const Navbar = ({ colors }) => {
 
     return (
         <Nav background={colors.$background} scrolled={scrolled}>
-            <LogoContent href="/">
+            <LogoContent href="/" scrolled={scrolled}>
                 <LogoText color={colors.$text}>FakTuR</LogoText>
             </LogoContent>
             {ismobile && (
@@ -41,7 +41,7 @@ const Navbar = ({ colors }) => {
                 background={colors.$background} >
                     <ul>
                         <li style={{"--clr": "#00ade1"}}>
-                            <a href="/#recruitment" text="Faction">Faction</a>
+                            <a href="/#recruitment" text="Faction" ismobile={{ismobile}}>Faction</a>
                         </li>
                         <li style={{"--clr": "#dc00d4"}}>
                             <a href="/#news" text="Recrutements">Recrutements</a>
@@ -67,20 +67,22 @@ const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 3%;
   transition: height 0.4s;
 `
 
 const LogoContent = styled.a`
 text-color: ${props => props.color};
-font-size: 3vw;
+font-size: 3em;
 text-align: center;    
 display: table-cell;
 vertical-align: middle;
 text-decoration: none; 
+width: ${props => (props.scrolled ? '50px' : '70px')};
+transition: width 0.4s, filter 0.4s;
+padding: 20px;
 `
 
-const LogoText = styled.text`
+const LogoText = styled.p`
 color: #ffffff;
 `
 const Burger = styled.div`
@@ -88,7 +90,7 @@ const Burger = styled.div`
   height: 30px;
   position: relative;
   cursor: pointer;
-  margin-right: 20px;
+  margin-right: 30px;
 
   & span {
     background-color: ${props =>
@@ -138,6 +140,11 @@ const BurgerMenu = styled.div`
   display: flex;
   overflow: hidden;
   transition: max-height 0.4s, padding 0.4s;
+
+  & ul li a {
+      color: ${props => (props.ismobile ? 'var(--clr)' : 'transparent')};
+      filter: ${props => (props.ismobile ? 'drop-shadow(0 0 8px var(--clr))' : '')};
+  }
 `
 
 export default Navbar;

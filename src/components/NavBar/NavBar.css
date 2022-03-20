@@ -8,9 +8,10 @@ ul {
     display: flex;
     list-style: none;
     align-items: center;
+
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 800px) {
     ul {
     flex-direction: column;
     text-align: center;
@@ -26,10 +27,10 @@ ul li {
 
 ul li a {
     position: relative;
-    font-size: 2vw;
     text-decoration: none;
-    line-height: 1vw;
-    letter-spacing: 0.15vw;
+    font-size: 1.2em;
+    line-height: 1em;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     color: transparent;
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
@@ -37,7 +38,6 @@ ul li a {
 
 ul li a::before {
     content: attr(text);
-    text-align: center;
     position: absolute;
     color: var(--clr);
     width: 0%;
@@ -47,5 +47,5 @@ ul li a::before {
 
 ul li a:hover::before {
     width: 100%;
-    filter: drop-shadow(0 0 5px var(--clr));
+    filter: drop-shadow(0 0 px var(--clr));
 }
