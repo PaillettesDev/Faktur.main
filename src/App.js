@@ -1,8 +1,8 @@
 
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/NavBar/NavBar.js";
 import Home from "./pages/Home/Home.js";
 import {useState} from 'react';
+import Navbar from "./components/NavBar/NavBar.js";
 
 function App() {
   const [isMobile, setIsMobile] = useState(
@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div style={{ overflowX: 'hidden' }}>
-      <Navbar colors={colors} />
+       <Navbar colors={colors}/>
       <Routes>
         <Route path="/" element={<Home colors={colors} isMobile={isMobile}/>} />
       </Routes>

@@ -5,7 +5,7 @@ import './NavBar.css'
 const Navbar = ({ colors }) => {
     const [scrolled, setScrolled] = useState(false)
     const [ismobile, setismobile] = useState(
-        window.innerWidth <= 800 ? true : false
+        window.innerWidth <= 811 ? true : false
     )
     const [menuIsOpen, setmenuIsOpen] = useState(ismobile ? false : true)
 
@@ -15,14 +15,14 @@ const Navbar = ({ colors }) => {
     })
 
     window.addEventListener('resize', () => {
-        if (window.innerWidth <= 800) setismobile(true)
+        if (window.innerWidth <= 820) setismobile(true)
         else setismobile(false)
     })
 
     const handleMenu = () => {
         setmenuIsOpen(!menuIsOpen)
     }
-
+console.log(ismobile);
     return (
         <Nav background={colors.$background} scrolled={scrolled}>
             <LogoContent href="/" scrolled={scrolled}>
@@ -49,7 +49,7 @@ const Navbar = ({ colors }) => {
                         <li style={{"--clr": "#00dc82"}}>
                             <a href="/#news" text="Réalisations">Réalisations</a>
                         </li>
-                        <li style={{"--clr": "#ff6493"}}>
+                        <li style={{"--clr": "#fb2f6d"}}>
                             <a href="/#news" text="News">News</a>
                         </li>
                     </ul>
@@ -136,6 +136,7 @@ const BurgerMenu = styled.div`
   padding-top: ${props => (props.ismobile && props.menuIsOpen ? '30px' : '0')};
   padding-bottom: ${props => (props.ismobile && props.menuIsOpen ? '30px' : '0')};
   max-height: ${props => (props.menuIsOpen ? '400px' : '0')};
+  border-radius: 20px;
   align-items: center;
   justify-content: space-between;
   display: flex;

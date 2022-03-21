@@ -11,7 +11,7 @@ ul {
 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 811px) {
     ul {
     flex-direction: column;
     text-align: center;
