@@ -4,7 +4,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-ul {
+.nav-ul {
     display: flex;
     list-style: none;
     align-items: center;
@@ -12,7 +12,7 @@ ul {
 }
 
 @media screen and (max-width: 811px) {
-    ul {
+    .nav-ul {
     flex-direction: column;
     text-align: center;
     align-items: center;
@@ -20,12 +20,12 @@ ul {
     }
 }
 
-ul li {
+.nav-ul li {
     position: relative;
     margin: 10px;
 }
 
-ul li a {
+.nav-ul li a {
     position: relative;
     text-decoration: none;
     font-size: 1.2em;
@@ -36,7 +36,7 @@ ul li a {
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
 }
 
-ul li a::before {
+.nav-ul li a::before {
     content: attr(text);
     position: absolute;
     color: var(--clr);
@@ -45,7 +45,7 @@ ul li a::before {
     transition: all 0.5s;
 }
 
-ul li a:hover::before {
+.nav-ul li a:hover::before {
     width: 100%;
     filter: drop-shadow(0 0 5px var(--clr));
 }

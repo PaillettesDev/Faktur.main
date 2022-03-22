@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home.js";
 import {useState} from 'react';
 import Navbar from "./components/NavBar/NavBar.js";
+import Footer from "./components/Footer/Footer.js";
 
 function App() {
   const [isMobile, setIsMobile] = useState(
@@ -26,6 +27,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home colors={colors} isMobile={isMobile}/>} />
       </Routes>
+      <Footer colors={colors}/>
     </div>
   );
 }

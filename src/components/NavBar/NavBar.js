@@ -22,7 +22,7 @@ const Navbar = ({ colors }) => {
     const handleMenu = () => {
         setmenuIsOpen(!menuIsOpen)
     }
-console.log(ismobile);
+
     return (
         <Nav background={colors.$background} scrolled={scrolled}>
             <LogoContent href="/" scrolled={scrolled}>
@@ -39,7 +39,7 @@ console.log(ismobile);
             <BurgerMenu menuIsOpen={menuIsOpen}
                 ismobile={ismobile}
                 background={colors.$background} >
-                    <ul>
+                    <ul className='nav-ul'>
                         <li style={{"--clr": "#00ade1"}}>
                             <a href="/#recruitment" text="Faction" ismobile={{ismobile}}>Faction</a>
                         </li>
