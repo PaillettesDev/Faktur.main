@@ -41,7 +41,7 @@ const Navbar = ({ colors }) => {
                 background={colors.$background} >
                     <ul className='nav-ul'>
                         <li style={{"--clr": "#00ade1"}}>
-                            <a href="/#recruitment" text="Faction" ismobile={{ismobile}}>Faction</a>
+                            <a href="/faction" text="Faction" ismobile={{ismobile}}>Faction</a>
                         </li>
                         <li style={{"--clr": "#dc00d4"}}>
                             <a href="/#news" text="Recrutements">Recrutements</a>
