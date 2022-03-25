@@ -21,7 +21,7 @@ const Footer = ({ colors }) => {
                         <h3>Credit</h3>
                         <ul>
                             <li className='footer-list'>
-                                <a>Paillettes_</a>
+                                <a href="https://github.com/PaillettesDev">Paillettes_</a>
                             </li>
                         </ul>
                     </div>
