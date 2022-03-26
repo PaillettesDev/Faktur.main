@@ -9,7 +9,8 @@ import Footer from "./components/Footer/Footer.js";
 //Pages
 import Home from "./pages/Home/Home.js";
 import Faction from "./pages/Faction/Faction.js";
-
+import Recruitment from "./pages/Recruitment/Recruitment.js";
+import Faq from "./pages/Faq/Faq.js";
 
 function App() {
   const [isMobile, setIsMobile] = useState(
@@ -33,6 +34,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home colors={colors} isMobile={isMobile} />} />
         <Route path="/faction" element={<Faction colors={colors} isMobile={isMobile} />} />
+        <Route path="/recruitment" element={<Recruitment colors={colors} isMobile={isMobile} />} />
+        <Route path="/faq" element={<Faq colors={colors} isMobile={isMobile} />} />
       </Routes>
       <Footer colors={colors} />
     </div>

@@ -15,6 +15,7 @@ const Home = ({ colors }) => {
 
     return (
         <>
+        <meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1, user-scalable=no;user-scalable=0;" />
             <Container background={colors.$background} ismobile={ismobile}>
                 <div className="text-container">
                     <h1>La FakTuR</h1>

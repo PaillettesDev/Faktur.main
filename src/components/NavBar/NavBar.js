@@ -44,13 +44,16 @@ const Navbar = ({ colors }) => {
                             <a href="/faction" text="Faction" ismobile={{ismobile}}>Faction</a>
                         </li>
                         <li style={{"--clr": "#dc00d4"}}>
-                            <a href="/#news" text="Recrutements">Recrutements</a>
+                            <a href="/recruitment" text="Recrutements">Recrutements</a>
                         </li>
                         <li style={{"--clr": "#00dc82"}}>
                             <a href="/#news" text="Réalisations">Réalisations</a>
                         </li>
                         <li style={{"--clr": "#fb2f6d"}}>
                             <a href="/#news" text="News">News</a>
+                        </li>
+                        <li style={{"--clr": "#f9ec51"}}>
+                            <a href="/#news" text="Faq">Faq</a>
                         </li>
                     </ul>
             </BurgerMenu>
@@ -136,7 +139,6 @@ const BurgerMenu = styled.div`
   padding-top: ${props => (props.ismobile && props.menuIsOpen ? '30px' : '0')};
   padding-bottom: ${props => (props.ismobile && props.menuIsOpen ? '30px' : '0')};
   max-height: ${props => (props.menuIsOpen ? '400px' : '0')};
-  border-radius: 20px;
   align-items: center;
   justify-content: space-between;
   display: flex;
