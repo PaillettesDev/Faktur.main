@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+.blur.active{
+    filter: blur(8px);
+ -webkit-filter: blur(8px);
+}
+
 .introduction-faq-container{
     margin-top: 20px;
     height: fit-content;
@@ -20,8 +25,20 @@
     font-family: calibri;
 }
 
+@media screen and (max-width: 569px) {
+    .introduction-faq-container h1{
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .introduction-faq-container h1{
+        font-size: 1em;
+    }
+}
+
 .wrapper{
-    width: 450px;
+    width: 500px;
     margin-left: auto;
     margin-right: auto;
 }

@@ -1,54 +1,36 @@
 import styled from "styled-components"
 import './Faq.css'
 import { useEffect, useState } from "react"
+import ModalSearchClicked from "../../components/Modal/ModalSearchClicked"
 
 const Faq = ({ colors }) => {
     const [ismobile, setismobile] = useState(
         window.innerWidth <= 820 ? true : false
     )
-
     const [searchTerm, setsearchTerm] = useState('')
     const [filteredData, setFilteredData] = useState([])
+    const [listClicked, setListClicked] = useState([])
 
     window.addEventListener('resize', () => {
         if (window.innerWidth <= 820) setismobile(true)
         else setismobile(false)
     })
 
-    let suggestions = [
-        "Channel",
-        "CodingLab",
-        "CodingNepal",
-        "YouTube",
-        "YouTuber",
-        "YouTube Channel",
-        "Blogger",
-        "Bollywood",
-        "Vlogger",
-        "Vechiles",
-        "Facebook",
-        "Freelancer",
-        "Facebook Page",
-        "Designer",
-        "Developer",
-        "Web Designer",
-        "Web Developer",
-        "Login Form in HTML & CSS",
-        "How to learn HTML & CSS",
-        "How to learn JavaScript",
-        "How to became Freelancer",
-        "How to became Web Designer",
-        "How to start Gaming Channel",
-        "How to start YouTube Channel",
-        "What does HTML stands for?",
-        "What does CSS stands for?",
-    ];
+    let [suggestions, setSuggestions] = useState([])
+
+    window.addEventListener("load", () =>{
+        fetch('http://192.168.88.239:82/faq/qr')
+        .then(resp => resp.json())
+        .then(data => {
+            setSuggestions(data)
+        })
+    })
 
     const handleFilter = (event) => {
         const searchWord = event.target.value;
         setsearchTerm(searchWord)
         const newFilter = suggestions.filter((value) => {
-            return value.toLowerCase().includes(searchWord.toLowerCase());
+            return value.question.toLowerCase().includes(searchWord.toLowerCase());
         });
 
         if(!newFilter.length > 0){
@@ -76,15 +58,33 @@ const Faq = ({ colors }) => {
                     searchWrapper.classList.remove('active');
                 }
             }
+
+            if(searchWrapper.classList.contains("active")){
+                window.addEventListener("click", function(click){
+                    var clickInsideWrapper = searchWrapper.contains(click.target);
+
+                    if(clickInsideWrapper === false){
+                        searchWrapper.classList.remove('active');
+                    }
+                })
+            }
         }
     })
 
     function handleSearch(value){
-        console.log(value)
+        setListClicked(value)
+    }
+
+    function handleClose(){
+        setListClicked([])
     }
 
     return (
         <>
+        {listClicked.length !== 0 && (
+            <ModalSearchClicked handlerClose={handleClose} element={listClicked}/>
+        )}
+        <meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1, user-scalable=no;user-scalable=0;" />
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"></link>
             <Container ismobile={ismobile} background={colors.$background}>
                 <div className="introduction-faq-container">
@@ -97,7 +97,7 @@ const Faq = ({ colors }) => {
                             <div className="autocom-box active">
                                 {filteredData.slice(0, 8).map((value, key) => {
                                     return (
-                                        <li key={key} onClick={() => {handleSearch(value)}}>{value}</li>
+                                        <li key={key} onClick={() => {handleSearch(value)}} style={{"whiteSpace": "nowrap", "overflow":"hidden", "textOverflow": "ellipsis"}}>{value.question}</li>
                                     );
                                 })}
                             </div>
@@ -111,11 +111,13 @@ const Faq = ({ colors }) => {
 }
 
 const Container = styled.div`
-  min-height: ${props => (props.ismobile ? "50vh" : "100vh")};
+padding-top: 100px;
+padding-bottom: 50px;
   background: ${props => props.background};
   display: flex;
   flex-direction: column;
   justify-content: center;
+  ${props => (props.ismobile ? "position: relative; bottom: 0;" : "")}
 `
 
 

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import './Recruitment.css'
-import { useState, useEffect } from "react"
+import { useState } from "react"
 
 const Recruitment = ({ colors }) => {
     const [ismobile, setismobile] = useState(

@@ -47,13 +47,13 @@ const Navbar = ({ colors }) => {
                             <a href="/recruitment" text="Recrutements">Recrutements</a>
                         </li>
                         <li style={{"--clr": "#00dc82"}}>
-                            <a href="/#news" text="Réalisations">Réalisations</a>
+                            <a href="/achievement" text="Réalisations">Réalisations</a>
                         </li>
                         <li style={{"--clr": "#fb2f6d"}}>
-                            <a href="/#news" text="News">News</a>
+                            <a href="/news" text="News">News</a>
                         </li>
                         <li style={{"--clr": "#f9ec51"}}>
-                            <a href="/#news" text="Faq">Faq</a>
+                            <a href="/faq" text="Faq">Faq</a>
                         </li>
                     </ul>
             </BurgerMenu>

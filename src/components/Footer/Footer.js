@@ -11,7 +11,7 @@ const Footer = ({ colors }) => {
                         <h3>Support</h3>
                         <ul>
                             <li className='footer-list'>
-                                <a href="/" >FAQ</a>
+                                <a href="/faq" >FAQ</a>
                                 <a href="https://discord.gg/WVyqW5crQA">Discord</a>
                                 <a href='href=mailto:paillettes2kevin@gmail.com?subject="Problème/Question"'>Contact mail</a>
                             </li>
@@ -38,7 +38,7 @@ const Footer = ({ colors }) => {
                         <ul>
                             <li className='footer-list'>
                                 <a href='/'>Home</a>
-                                <a href='/Recruitement'>Recrutements</a>
+                                <a href='/recruitment'>Recrutements</a>
                                 <a href='/achievement'>Réalisation</a>
                                 <a href='/News'>News</a>
                             </li>
