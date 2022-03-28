@@ -40,7 +40,7 @@ const Footer = ({ colors }) => {
                                 <a href='/'>Home</a>
                                 <a href='/recruitment'>Recrutements</a>
                                 <a href='/achievement'>Réalisation</a>
-                                <a href='/News'>News</a>
+                                <a href='/faction'>Faction</a>
                             </li>
                         </ul>
                     </div>

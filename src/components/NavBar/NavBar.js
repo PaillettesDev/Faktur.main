@@ -49,9 +49,6 @@ const Navbar = ({ colors }) => {
                         <li style={{"--clr": "#00dc82"}}>
                             <a href="/achievement" text="Réalisations">Réalisations</a>
                         </li>
-                        <li style={{"--clr": "#fb2f6d"}}>
-                            <a href="/news" text="News">News</a>
-                        </li>
                         <li style={{"--clr": "#f9ec51"}}>
                             <a href="/faq" text="Faq">Faq</a>
                         </li>
