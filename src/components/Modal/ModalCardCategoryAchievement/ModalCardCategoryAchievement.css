@@ -15,3 +15,18 @@
         padding: 10px 10px;
     }
 }
+
+@media screen and (max-width: 420px) {
+    .achievement-all-card{
+        width: 75%;
+        height: 50%;
+    }
+
+    .information-category-achievement-card span{
+        font-size: 0.7em;
+    }
+
+    .information-category-achievement-card p{
+        font-size: 1em;
+    }
+}

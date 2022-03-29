@@ -1,5 +1,5 @@
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Calibri', sans-serif;
 }
 
 .introduction-container {
@@ -104,7 +104,7 @@
     color: #ffffff;
 }
 
-.form-container p{
+.form-container p {
     color: #868484;
     font-size: 1em;
     font-family: calibri;
@@ -127,7 +127,180 @@
 }
 
 @media (max-width: 750px) {
-    .background-form-color{
+    .background-form-color {
         width: 98%;
     }
+}
+
+.condition-title h1 {
+    font-family: calibri;
+    font-size: 2em;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 3px;
+    color: #ffffff;
+    text-align: left;
+}
+
+.condition-title h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 150px;
+    border-radius: 3px;
+    background-color: #2ecc71;
+}
+
+.condition-title p {
+    font-family: calibri;
+    font-size: 1em;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 3px;
+    color: #868484;
+    text-align: left;
+}
+
+.condition-container {
+    position: relative;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    background-color: #14191E;
+}
+
+.condition-container-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.condition-container .condition-box {
+    position: relative;
+    width: 400px;
+    height: 100px;
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 856px) {
+    .condition-container .condition-box {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .condition-container-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .condition-container .condition-box {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+
+    .condition-container .condition-box {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    .condition-container .condition-box .condition-content .condition-icon i {
+        font-size: 1.8em;
+    }
+
+    .condition-container .condition-box .condition-content .condition-text h3 {
+        font-size: 1em;
+    }
+
+    .condition-container .condition-box .condition-content .condition-text p {
+        font-size: 0.8em;
+    }
+
+    .condition-container .condition-box .condition-content .condition-icon {
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 270px) {
+
+    .condition-container .condition-box .condition-content .condition-icon i {
+        font-size: 1.5em;
+    }
+
+    .condition-container .condition-box .condition-content .condition-text h3 {
+        font-size: 0.8em;
+    }
+
+    .condition-container .condition-box .condition-content .condition-text p {
+        font-size: 0.6em;
+    }
+
+    .condition-container .condition-box .condition-content .condition-icon {
+        width: 50px;
+    }
+}
+
+.condition-container .condition-box::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: var(--clr);
+    transition: 0.5s ease;
+}
+
+.condition-container .condition-box:hover::before {
+    width: 100%;
+}
+
+.condition-container .condition-box .condition-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.condition-container .condition-box .condition-content .condition-icon {
+    position: relative;
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.condition-container .condition-box .condition-content .condition-icon i {
+    font-size: 2.5em;
+    color: var(--clr);
+    transition: 0.5s ease;
+}
+
+.condition-container .condition-box:hover .condition-content .condition-icon i {
+    color: #ffffff;
+}
+
+.condition-container .condition-box .condition-content .condition-text h3 {
+    font-weight: bold;
+    color: var(--clr);
+    transition: 0.5s ease;
+}
+
+.condition-container .condition-box .condition-content .condition-text p {
+    font-weight: bold;
+    color: #999;
+    transition: 0.5s ease;
+}
+
+.condition-container .condition-box:hover .condition-content .condition-text h3,
+.condition-container .condition-box:hover .condition-content .condition-text p {
+    color: #ffffff;
 }

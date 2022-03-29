@@ -39,7 +39,7 @@
 }
 
 .faq-accordion p{
-    font-size: 0.9em;
+    font-size: 1em;
     margin: 0;
     padding: 3px 0 0 0;
     font-weight: bold;
@@ -51,6 +51,7 @@
     border-left: 1.5px solid #2ecc81;
     margin-left: 25px;
     font-size: 0.8em;
+    font-weight: bold;
     text-align: justify;
     overflow: hidden;
     max-height: 0px;

@@ -194,4 +194,17 @@
         width: 75%;
         height: 50%;
     }
+
+    .category-achievement-container{
+        width: 75%;
+        height: 50%;
+    }
+
+    .information-category-achievement-card span{
+        font-size: 0.7em;
+    }
+
+    .information-category-achievement-card p{
+        font-size: 1em;
+    }
 }

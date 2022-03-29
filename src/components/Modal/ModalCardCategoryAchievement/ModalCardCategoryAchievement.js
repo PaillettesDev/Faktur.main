@@ -67,9 +67,6 @@ const ModalCardCategoryAchievement = ({ handlerClose, categoryInfo, achievementI
                     <ModalTopTitle>Paladium {categoryInfo.category_name}</ModalTopTitle>
                     <button className="leave-button-category" onClick={handlerClose}>Fermer</button>
                 </ModalTop>
-                <ModalResponseContainer>
-                    <ModalResponse>{categoryInfo.category_description}</ModalResponse>
-                </ModalResponseContainer>
                 <ModalPicturesContainer>
                     <ModalPictureTitle>Réalisations</ModalPictureTitle>
                     <div className='card-achievement-picture-container'>
@@ -121,6 +118,9 @@ const ModalCardCategoryAchievement = ({ handlerClose, categoryInfo, achievementI
                         </Swiper>
                     </div>
                 </ModalPicturesContainer>
+                <ModalResponseContainer>
+                    <ModalResponse>{categoryInfo.category_description}</ModalResponse>
+                </ModalResponseContainer>
             </ModalContainer>
         </>
     );
@@ -211,6 +211,7 @@ color: #7e7d7d;
 const ModalPicturesContainer = styled.div`
 width: 100%;
 height: fit-content;
+margin-top: 10px;
 align-items: center;
 justify-content: center;
 text-align: center;
