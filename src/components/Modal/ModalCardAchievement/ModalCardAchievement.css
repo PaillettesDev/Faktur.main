@@ -1,0 +1,39 @@
+.card-achievement-picture-container{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.swiper-card-achievement-pictures{
+    width: 100%;
+    height: 100%;
+}
+
+.achievement-picture-card-container{
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.achievement-picture-card-container:hover{
+    transform: translateY(-15px);
+}
+
+.achievement-picture-card{
+    height: 100%;
+    transition: all 0.4s ease;
+}
+
+.achievement-picture-card img{
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    box-sizing: border-box;
+    transition: all 0.4s ease;
+}
