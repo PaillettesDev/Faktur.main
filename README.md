@@ -1,4 +1,6 @@
 This is my first site, i have almost never touch of html/css, so it is possible there is some problems.
+
+Secondly this site necessity to run with her api for work correctly.(api: https://github.com/PaillettesDev/Faktur-api)
 ---
 # Getting Started with Create React App
 
