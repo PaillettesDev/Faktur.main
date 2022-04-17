@@ -1,4 +1,4 @@
-This is my first site, i have almost never touch of html/css, it is there is some problems.
+This is my first site, i have almost never touch of html/css, so it is possible there is some problems.
 ---
 # Getting Started with Create React App
 
